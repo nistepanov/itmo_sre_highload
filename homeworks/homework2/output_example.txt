@@ -1,0 +1,42 @@
+/bin/bash /home/nistepanov/PycharmProjects/itmo_devops_highload/homeworks/homework2/system_monitoring.sh
+ Main CPU information:
+ top - 04:18:28 up 15:33,  1 user,  load average: 0,48, 0,74, 0,76
+Tasks: 484 total,   1 running, 479 sleeping,   4 stopped,   0 zombie
+%Cpu(s):  0,8 us,  0,4 sy,  0,0 ni, 98,8 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
+MiB Mem :  31698,0 total,   8916,8 free,   8682,1 used,  15374,8 buff/cache
+Current CPU load (%): 2.0%
+
+ Main RAM information:
+                total        used        free      shared  buff/cache   available
+Mem:            30Gi       8,5Gi       8,7Gi       816Mi        15Gi        22Gi
+Swap:          2,0Gi          0B       2,0Gi
+Current free RAM: 8.7 Gb
+  WARNING! Free RAM less than min target threshold 10 Gb!
+
+ Main Disk Mem information:
+ Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           3,1G  2,4M  3,1G   1% /run
+efivarfs        268K  151K  113K  58% /sys/firmware/efi/efivars
+/dev/nvme0n1p2  938G  265G  626G  30% /
+tmpfs            16G  195M   16G   2% /dev/shm
+tmpfs           5,0M  8,0K  5,0M   1% /run/lock
+tmpfs            16G     0   16G   0% /run/qemu
+/dev/nvme0n1p1  511M   15M  497M   3% /boot/efi
+tmpfs           3,1G  248K  3,1G   1% /run/user/1000
+Current rate of disk usage: 30%
+  WARNING! Disk rate usage exceed max target threshold 25%!
+
+Disk I/O statistics:
+ Linux 6.8.0-44-generic (nistepanov)    10/08/2024      _x86_64_        (22 CPU)
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+nvme0n1          3,22    108,34     1,30  28,79    0,41    33,70   19,93    443,33    22,70  53,24    1,57    22,24    0,00      0,00     0,00   0,00    0,00     0,00    2,22    0,33    0,03   0,68
+Current disk reading speed: 108.34 kB/s
+  WARNING! Disk reading speed less than min target threshold 150 kB/s!
+
+ Main network connections information:
+Count network connections by state:
+     75 ESTABLISHED
+      2 CLOSE_WAIT
+      1 TIME_WAIT
+      1 Foreign
+      1
