@@ -1,0 +1,7 @@
+[Unit]
+Description=Check Flask Web Application Status
+
+[Service]
+Type=oneshot
+ExecStart=/home/nistepanov/opt/webapp/myenv/bin/python3 /home/nistepanov/opt/webapp/check_status_web_app.py
+Environment="PATH=/home/nistepanov/opt/webapp/myenv/bin"

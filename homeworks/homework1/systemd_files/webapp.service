@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask Web Application
+After=network.target
+
+[Service]
+ExecStart=/home/nistepanov/opt/webapp/myenv/bin/python3 /home/nistepanov/opt/webapp/app.py
+WorkingDirectory=/home/nistepanov/opt/webapp
+Restart=always
+Environment="PATH=/home/nistepanov/opt/webapp/myenv/bin"
+
+[Install]
+WantedBy=multi-user.target
