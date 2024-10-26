@@ -1,0 +1,99 @@
+=== CPU Information ===
+CPU Model: Intel(R) Core(TM) Ultra 7 155H
+BIOS Intel(R) Core(TM) Ultra 7 155H To Be Filled By O.E.M. CPU @ 4.2GHz
+CPU count: 22
+Current CPU MHz:
+Max CPU MHz: 4800,0000
+Caches (sum of all):
+L1 Cache: 544 KiB (14 instances)
+L2 Cache: 18 MiB (9 instances)
+L3 Cache: 24 MiB (1 instance)
+CPU sockets: 1
+Cores per socket: 16
+Threads per core: 2
+
+=== Memory Information ===
+# dmidecode 3.5
+Getting SMBIOS data from sysfs.
+SMBIOS 3.6 present.
+# SMBIOS implementations newer than version 3.5.0 are not
+# fully supported by this version of dmidecode.
+
+Handle 0x0028, DMI type 16, 23 bytes
+Physical Memory Array
+        Location: System Board Or Motherboard
+        Use: System Memory
+        Error Correction Type: None
+        Maximum Capacity: 32 GB
+        Error Information Handle: Not Provided
+        Number Of Devices: 2
+
+Handle 0x0029, DMI type 17, 92 bytes
+Memory Device
+        Array Handle: 0x0028
+        Error Information Handle: Not Provided
+        Total Width: 16 bits
+        Data Width: 16 bits
+        Size: 16 GB
+        Form Factor: Row Of Chips
+        Set: None
+        Locator: Controller0-ChannelA
+        Bank Locator: BANK 0
+        Type: LPDDR5
+        Type Detail: Synchronous
+        Speed: 7467 MT/s
+        Manufacturer: Micron Technology
+        Serial Number: 00000000
+        Asset Tag: 9876543210
+        Part Number: MT62F2G32D4DS-026
+        Rank: 2
+        Configured Memory Speed: 7467 MT/s
+        Minimum Voltage: Unknown
+        Maximum Voltage: Unknown
+        Configured Voltage: 0.5 V
+        Memory Technology: DRAM
+        Memory Operating Mode Capability: Volatile memory
+        Firmware Version: Not Specified
+        Module Manufacturer ID: Bank 1, Hex 0x2C
+        Module Product ID: Unknown
+        Memory Subsystem Controller Manufacturer ID: Unknown
+        Memory Subsystem Controller Product ID: Unknown
+        Non-Volatile Size: None
+        Volatile Size: 16 GB
+        Cache Size: None
+        Logical Size: None
+
+Handle 0x002A, DMI type 17, 92 bytes
+Memory Device
+        Array Handle: 0x0028
+        Error Information Handle: Not Provided
+        Total Width: 16 bits
+        Data Width: 16 bits
+        Size: 16 GB
+        Form Factor: Row Of Chips
+        Set: None
+        Locator: Controller1-ChannelA
+        Bank Locator: BANK 0
+        Type: LPDDR5
+        Type Detail: Synchronous
+        Speed: 7467 MT/s
+        Manufacturer: Micron Technology
+        Serial Number: 00000000
+        Asset Tag: 9876543210
+        Part Number: MT62F2G32D4DS-026
+        Rank: 2
+        Configured Memory Speed: 7467 MT/s
+        Minimum Voltage: Unknown
+        Maximum Voltage: Unknown
+        Configured Voltage: 0.5 V
+        Memory Technology: DRAM
+        Memory Operating Mode Capability: Volatile memory
+        Firmware Version: Not Specified
+        Module Manufacturer ID: Bank 1, Hex 0x2C
+        Module Product ID: Unknown
+        Memory Subsystem Controller Manufacturer ID: Unknown
+        Memory Subsystem Controller Product ID: Unknown
+        Non-Volatile Size: None
+        Volatile Size: 16 GB
+        Cache Size: None
+        Logical Size: None
