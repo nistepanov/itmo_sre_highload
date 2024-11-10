@@ -1,8 +1,8 @@
+import argparse
 import os
+import subprocess
 import sys
 import tarfile
-import argparse
-import subprocess
 
 CPU_USAGE_TIME = 100000
 CGROUPS_MY_DOCKER = '/sys/fs/cgroup/my_docker/'
@@ -24,6 +24,7 @@ def _parse_memory_size(size_str: str) -> int:
         case _:
             raise ValueError(f"Unsupported mem unit: {unit_part}; Set as example: 100M")
 
+
 def _download_and_export_docker_image(image_name, output_path):
     try:
         subprocess.run(['docker', 'pull', image_name], check=True)
@@ -37,11 +38,13 @@ def _download_and_export_docker_image(image_name, output_path):
         )
         sys.exit(1)
 
+
 def _extract_rootfs(tar_path, extract_path):
     if not os.path.exists(extract_path):
         os.makedirs(extract_path)
     with tarfile.open(tar_path, 'r') as tar:
         tar.extractall(path=extract_path)
+
 
 def _setup_cgroups(pid, mem_limit, cpu_limit):
     if not os.path.exists(CGROUPS_MY_DOCKER):
@@ -59,17 +62,20 @@ def _setup_cgroups(pid, mem_limit, cpu_limit):
     with open(os.path.join(CGROUPS_MY_DOCKER, 'cgroup.procs'), 'w') as f:
         f.write(str(pid))
 
+
 def _create_namespaces():
     try:
         subprocess.run(['unshare', '--mount', '--pid', 'true'], check=True)
     except Exception as exp:
         print(f"Err while creating namespace: {exp}")
 
+
 def _run_command_inside_container(related_pid, rootfs_dir, command):
     print(related_pid)
     os.chroot(rootfs_dir)
     os.chdir('/')
     os.execvp(command.split()[0], command.split())
+
 
 def main():
     parser = argparse.ArgumentParser(description='Simple Docker-like container in Python')
@@ -97,6 +103,7 @@ def main():
     _create_namespaces()
 
     _run_command_inside_container(pid, ROOTFS_DIR, args.command)
+
 
 if __name__ == '__main__':
     main()
